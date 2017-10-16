@@ -1,4 +1,9 @@
 package model;
+import exceptions.CourseFullException;
+import exceptions.GPATooLowException;
+import exceptions.MissingPrereqException;
+import exceptions.NoCoursesTakenException;
+
 import java.util.List;
 
 public class Registrar {
@@ -28,16 +33,16 @@ public class Registrar {
         return false;
     }
 
-    // EFFECTS: registers a given student represented by tct to a course c. It should throw
-    //          CourseFullException or MissingPrereqException
-    public boolean registerStudent(Course c, Transcript tct) {
+    //REQUIRES: that the student represented by the transcript has the necessary prerequisite required
+    //          to take the course, and the course is not full
+    // EFFECTS: registers a given student represented by tct to a course c.
+    public boolean registerStudent(Course c, Transcript tct) throws CourseFullException, MissingPrereqException {
         // TODO: complete the implementation of this method
         return false;
     }
 
-    // EFFECTS: promotes all students to their next year level. It should throw GPATooLowException or
-    //          NoCoursesTakenException
-    public void promoteAllStudents() {
+    // EFFECTS: promotes all students to their next year level.
+    public void promoteAllStudents() throws GPATooLowException, NoCoursesTakenException {
         // TODO: complete the implementation of this method
     }
 

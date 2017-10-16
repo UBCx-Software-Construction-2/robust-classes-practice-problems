@@ -66,10 +66,10 @@ public class Transcript {
         return false;
     }
 
-    // REQUIRES: - check if the course you want to add is already in the list of past courses
+
     // MODIFIES: this
-    // EFFECTS: adds the given course to the list of previously taken courses, given that the REQUIRES clause
-    //          is fulfilled, and returns true. If the course is unable to be added, return false
+    // EFFECTS: adds the given course to the list of past courses and returns true,
+    //          unless pastCourses contains given course, then does not add and returns false
     public boolean addToPastCourses(Course c) {
         //TODO: implement this method
         return false;
