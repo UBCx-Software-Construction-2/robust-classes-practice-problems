@@ -36,7 +36,7 @@ public class BusFareCard {
     //           the balance on this card must be >= 0 after purchasing the card
     // MODIFIES: this
     // EFFECTS: if the REQUIRES clause is fulfilled, subtract cost of the adult fare from the balance
-    //          and set the isFareLoaded field to true
+    //          and set the fareLoaded field to true
     public void purchaseAdultFare() throws IllegalAgeException, NoBalanceException {
         //TODO: complete the implementation of this method
     }
@@ -45,7 +45,7 @@ public class BusFareCard {
     //           the balance on this card must be >= 0 after purchasing the card
     // MODIFIES: this
     // EFFECTS: if the REQUIRES clauses is fulfilled, subtract cost of a concession fare from the balance
-    //          and set the isFareLoaded field to true
+    //          and set the fareLoaded field to true
     public void purchaseConcessionTicket() throws IllegalAgeException, NoBalanceException {
         //TODO: complete the implementation of this method
     }
