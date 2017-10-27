@@ -61,6 +61,7 @@ public class BusFareCardTest {
         assertEquals(adultCard.getBalance(),100.00, 0.05);
         try {
             adultCard.purchaseConcessionTicket();
+            fail("IllegalAgeException should have been thrown");
         } catch (IllegalAgeException e1) {
             System.out.println(e1.getMessage());
         } catch (NoBalanceException e2) {
