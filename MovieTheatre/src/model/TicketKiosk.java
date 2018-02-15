@@ -23,14 +23,14 @@ public class TicketKiosk {
         return null;
     }
 
-    //EFFECTS: adds the movie (m) to the movies field. Check if the movie (m) is already within movies before you
-    //         add it in the method. If adding (m) is successful, return true, else return false.
+    //EFFECTS:  adds the movie to movies, unless it is already in movies.
+    //          if add is successful return true, otherwise return false.
     public boolean addMovie(Movie m) {
         // TODO: complete the implementation of this method
         return false;
     }
 
-    //EFFECTS: calls MovieGoer.buyTicket(Movie m) on mg, where the ticket is for the movie m.
+    //EFFECTS: calls MovieGoer's buyTicket method, passing m as a parameter.
     public boolean sellTicket(MovieGoer mg, Movie m) {
         // TODO: complete the implementation of this method
         return true;
