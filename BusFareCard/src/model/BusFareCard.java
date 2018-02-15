@@ -32,34 +32,34 @@ public class BusFareCard {
     public double getBalance() { return balance; }
     public boolean isFareLoaded() { return fareLoaded; }
 
-    // REQUIRES: the age of this card must be > AGE_CUTOFF
-    //           the balance on this card must be >= 0 after purchasing the card
     // MODIFIES: this
-    // EFFECTS: if the REQUIRES clause is fulfilled, subtract cost of the adult fare from the balance
+    // EFFECTS: if the age of this card < AGE_CUTOFF throws IllegalAgeException
+    //          if balance < 0 throws NoBalanceException 
+    //          otherwise subtract cost of the adult fare from the balance
     //          and set the fareLoaded field to true
     public void purchaseAdultFare() throws IllegalAgeException, NoBalanceException {
         //TODO: complete the implementation of this method
     }
 
-    // REQUIRES: the age of this card must be <= AGE_CUTOFF
-    //           the balance on this card must be >= 0 after purchasing the card
     // MODIFIES: this
-    // EFFECTS: if the REQUIRES clauses is fulfilled, subtract cost of a concession fare from the balance
+    // EFFECTS: if the age of this card is >  AGE_CUTOFF throws IllegalAgeException
+    //          if the the balance on this card is < 0 throws NoBalanceException
+    //          otherwise subtract cost of a concession fare from the balance
     //          and set the fareLoaded field to true
     public void purchaseConcessionTicket() throws IllegalAgeException, NoBalanceException {
         //TODO: complete the implementation of this method
     }
 
-    // REQUIRES: amount you want to load onto the card must be > 0
     // MODIFIES: this
-    // EFFECTS: loads the specified amount onto the card's balance field
+    // EFFECTS: if amount < 0, throws IllegalAmountException
+    //          otherwise: loads the specified amount onto the card's balance field
     public void reloadBalance(double amount) throws IllegalAmountException {
         //TODO: complete the implementation of this method
     }
 
-    // REQUIRES: the fareLoaded field must be true in order to "board" a bus
     // MODIFIES: this
-    // EFFECTS: sets fareLoaded field to false, else throws exception
+    // EFFECTS: if the fare is not loaded, throws MissingFareException
+    //          otherwise, sets fareLoaded to false
     public void boardBus() throws MissingFareException {
         //TODO: complete the implementation of this method
     }
