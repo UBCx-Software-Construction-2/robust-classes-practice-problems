@@ -46,22 +46,25 @@ public class Transcript {
         return null;
     }
 
-    // REQUIRES: a non-empty list of past courses, i.e. size of pastCourses must be non-zero
-    //           use the following formula to convert into a GPA
-    //           GPA (4.0 scale) = (total percentage/20) - 1
-    //           **Do you need a helper?**
-    // EFFECTS: computes cGPA. In this case, we take it to mean that it is the total grades received so far, divided
-    //          by the number of past courses taken
+    // EFFECTS: computes cGPA
+    //          if the list of past courses is empty, throws NoCoursesTakenException
     public double computeGPA() throws NoCoursesTakenException {
+        //          HINTS:
+        //          use the following formula to convert into a GPA
+        //          GPA (4.0 scale) = (total percentage/20) - 1
+        //          **Do you need a helper method?**
+        
         // TODO: complete the implementation of this method
         return 0.0;
     }
 
-    // REQUIRES: the GPA computed from the pastCourses field needs to be over 2.6 (out of 4.0 scale)
     // EFFECTS: promotes the student represented by the transcript
     //          to the next academic year if the REQUIRES clause is met, and return true
     //          else return false with no change to the year field
+    //          if GPA is not over 2.6 on a 4.0 scale, throws GPATooLowException
+    //          if no courses have been taken, throws NoCoursesTakenException
     public boolean promoteStudent() throws GPATooLowException, NoCoursesTakenException {
+        
         // TODO: complete the implementation of this method
         return false;
     }
@@ -75,10 +78,10 @@ public class Transcript {
         return false;
     }
 
-    // REQUIRES: this transcript must have all the necessary prerequisites in the pastCourses field
-    //           The course you want to add must have space for more students to register
     // MODIFIES: this
     // EFFECTS: adds a course (c) into the record
+    //          if the transcript is missing prerequisites, throws a MissingPrereqException
+    //          if the course has no space for more students to register, throws a CourseFullException
     public boolean addCourse(Course course) throws MissingPrereqException, CourseFullException {
         // TODO: implement this method.
         // You have to realize that there are a number of cases that your code needs to consider. What if the course
