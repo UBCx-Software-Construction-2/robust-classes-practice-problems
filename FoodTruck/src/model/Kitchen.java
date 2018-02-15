@@ -26,8 +26,7 @@ public class Kitchen {
         cookReady = b;
     }
 
-    // REQUIRES: the cook needs to be present in truck (i.e. the cookReady field must be true)
-    //           the amount of ingredients after we make the required amount of tacos must be >= 0
+    // REQUIRES: the cook needs to be ready to cook
     // MODIFIES: this
     // EFFECTS:  number is added to tacoCount, and ingredient is decremented accordingly
     public void makeTaco(int number) {
@@ -35,7 +34,7 @@ public class Kitchen {
         tacoCount += number;
     }
 
-    // REQUIRES: the balance field has to be greater than, or equal to 0 once we purchase (amount) of ingredients
+    // REQUIRES: balance should be >=0
     // MODIFIES: this
     // EFFECTS: (amount) is added to the ingredient field, and the balance field
     //          is decremented accordingly
