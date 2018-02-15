@@ -59,7 +59,7 @@ public class Transcript {
     }
 
     // EFFECTS: promotes the student represented by the transcript
-    //          to the next academic year if the REQUIRES clause is met, and return true
+    //          to the next academic year if GPA is over 2.6 on a 4.0 scale, and return true
     //          else return false with no change to the year field
     //          if GPA is not over 2.6 on a 4.0 scale, throws GPATooLowException
     //          if no courses have been taken, throws NoCoursesTakenException
