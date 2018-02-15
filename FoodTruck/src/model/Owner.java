@@ -15,15 +15,15 @@ public class Owner {
     public Kitchen getKitchen() { return kitchen; }
 
     // REQUIRES: we have enough ingredients to make the specified amount of tacos
-    // MODIFIES: this object's kitchen field
-    // EFFECTS: invokes the makeTaco() method on this object's kitchen, returns true
+    // MODIFIES: this
+    // EFFECTS: calls makeTaco on the kitchen, returns true
     public boolean orderMoreTacos(int amount) {
         kitchen.makeTaco(amount);
         return true;
     }
 
-    //MODIFIES: this object's kitchen field
-    //EFFECTS: invokes the buyIngredients() method on this object's kitchen, returns true.
+    //MODIFIES: this 
+    //EFFECTS: calls buyIngredients on the kitchen, returns true.
     public boolean askForMoreIngredients(int amount) {
         this.kitchen.buyIngredients(amount);
         return true;
