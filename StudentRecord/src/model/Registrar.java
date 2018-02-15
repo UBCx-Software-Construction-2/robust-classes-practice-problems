@@ -33,15 +33,17 @@ public class Registrar {
         return false;
     }
 
-    //REQUIRES: that the student represented by the transcript has the necessary prerequisite required
-    //          to take the course, and the course is not full
     // EFFECTS: registers a given student represented by tct to a course c.
+    //          if the student is missing the necessary prerequisites throws MissingPrereqException
+    //          if the course is full throws CourseFullException
     public boolean registerStudent(Course c, Transcript tct) throws CourseFullException, MissingPrereqException {
         // TODO: complete the implementation of this method
         return false;
     }
 
     // EFFECTS: promotes all students to their next year level.
+    //          if the GPA is too low (2.6 out of 4.0), throws a GPATooLowException
+    //          if no courses have been taken, throws a NoCoursesTaken exception
     public void promoteAllStudents() throws GPATooLowException, NoCoursesTakenException {
         // TODO: complete the implementation of this method
     }
