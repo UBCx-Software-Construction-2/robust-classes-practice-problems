@@ -36,7 +36,7 @@ public class Registrar {
     // EFFECTS: registers a given student represented by tct to a course c.
     //          if the student is missing the necessary prerequisites throws MissingPrereqException
     //          if the course is full throws CourseFullException
-    public boolean registerStudent(Course c, Transcript tct) throws CourseFullException, MissingPrereqException {
+    public boolean registerStudent(Course c, Transcript tct) {
         // TODO: complete the implementation of this method
         return false;
     }

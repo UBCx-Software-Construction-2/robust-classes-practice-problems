@@ -43,6 +43,9 @@ public class Transcript {
 
     public List<Course> getPastCourses() {
         // TODO: complete the implementation of this method
+        // HINT: you may need to consider what kind of information a completed
+        // course on a transcript needs to have that the Course class
+        // doesn't already contains
         return null;
     }
 
