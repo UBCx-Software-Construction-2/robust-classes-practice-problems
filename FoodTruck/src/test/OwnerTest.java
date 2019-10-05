@@ -2,6 +2,9 @@ package test;
 
 import model.Kitchen;
 import model.Owner;
+import model.exceptions.NoCookException;
+import model.exceptions.NoIngredientException;
+import model.exceptions.NotEnoughMoneyException;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -25,7 +28,7 @@ public class OwnerTest {
     }
 
     @Test
-    public void testOrderMoreTacos() {
+    public void testOrderMoreTacos() throws NoCookException, NoIngredientException {
         assertEquals(testOwner.getKitchen().getIngredientCount(),30);
         assertEquals(testOwner.getKitchen().getTacoCount(),4);
 
@@ -38,7 +41,7 @@ public class OwnerTest {
     }
 
     @Test
-    public void testaskForMoreIngredients() {
+    public void testaskForMoreIngredients() throws NotEnoughMoneyException {
         assertEquals(testOwner.getKitchen().getIngredientCount(), 30);
         assertEquals(testOwner.getKitchen().getBalance(),100);
 
